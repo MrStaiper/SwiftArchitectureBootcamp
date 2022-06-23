@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		F69107272863FD9C004FAF13 /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = F69107262863FD9C004FAF13 /* Domain.docc */; };
 		F69107282863FD9C004FAF13 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = F69107252863FD9C004FAF13 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F691072E2863FF7D004FAF13 /* AddAccountTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F691072D2863FF7D004FAF13 /* AddAccountTestCase.swift */; };
+		F691073328640040004FAF13 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F691073228640040004FAF13 /* AccountModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F69107232863FD9C004FAF13 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69107252863FD9C004FAF13 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		F69107262863FD9C004FAF13 /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
+		F691072D2863FF7D004FAF13 /* AddAccountTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountTestCase.swift; sourceTree = "<group>"; };
+		F691073228640040004FAF13 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,10 +51,60 @@
 		F69107242863FD9C004FAF13 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				F691074028640321004FAF13 /* Source */,
+				F691072C2863FF60004FAF13 /* DomainTests */,
 				F69107252863FD9C004FAF13 /* Domain.h */,
 				F69107262863FD9C004FAF13 /* Domain.docc */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		F691072C2863FF60004FAF13 /* DomainTests */ = {
+			isa = PBXGroup;
+			children = (
+				F69107312863FF9C004FAF13 /* Spy */,
+				F69107302863FF96004FAF13 /* Seeds */,
+				F691072F2863FF8B004FAF13 /* UnitTest */,
+			);
+			path = DomainTests;
+			sourceTree = "<group>";
+		};
+		F691072F2863FF8B004FAF13 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				F691072D2863FF7D004FAF13 /* AddAccountTestCase.swift */,
+			);
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		F69107302863FF96004FAF13 /* Seeds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Seeds;
+			sourceTree = "<group>";
+		};
+		F69107312863FF9C004FAF13 /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Spy;
+			sourceTree = "<group>";
+		};
+		F691074028640321004FAF13 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F691074128640331004FAF13 /* Login */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F691074128640331004FAF13 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F691073228640040004FAF13 /* AccountModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +187,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F69107272863FD9C004FAF13 /* Domain.docc in Sources */,
+				F691073328640040004FAF13 /* AccountModel.swift in Sources */,
+				F691072E2863FF7D004FAF13 /* AddAccountTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
