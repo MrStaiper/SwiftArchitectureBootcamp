@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol AddAccountLogic {
+public protocol AddAccountLogic {
     func addUser(user: AccountModel.Request, completion: @escaping (Result<AccountModel.Response, Error>) -> Void)
 }

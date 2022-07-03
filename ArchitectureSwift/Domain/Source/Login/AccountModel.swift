@@ -7,22 +7,29 @@
 
 import Foundation
 
-struct AccountModel {
-    struct Request {
-        var name: String?
-        var email: String?
-        var password: String?
-        var passwordConfirm: String?
+public struct AccountModel {
+    public struct Request : Encodable {
+        public var name: String
+        public var email: String
+        public var password: String
+        public var passwordConfirm: String
+        
+        public init(name: String, email: String, password: String, passwordConfirm: String) {
+            self.name = name
+            self.email = email
+            self.password = password
+            self.passwordConfirm = passwordConfirm
+        }
     }
     
-    struct Response {
+    public struct Response {
         var id: String?
         var name: String?
         var email: String?
         var password: String?
     }
     
-    struct ViewModel {
+    public struct ViewModel {
         
     }
 }
