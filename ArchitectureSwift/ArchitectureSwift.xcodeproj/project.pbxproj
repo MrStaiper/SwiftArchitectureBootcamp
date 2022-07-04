@@ -15,6 +15,7 @@
 		F691072E2863FF7D004FAF13 /* AddAccountTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F691072D2863FF7D004FAF13 /* AddAccountTestCase.swift */; };
 		F691073328640040004FAF13 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F691073228640040004FAF13 /* AccountModel.swift */; };
 		F6AD070528726105009B4F82 /* RemoteAddAccountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AD070428726105009B4F82 /* RemoteAddAccountFactory.swift */; };
+		F6AD07082872697A009B4F82 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AD07072872697A009B4F82 /* BaseModel.swift */; };
 		F6C1465B286530C20069EF04 /* Data.docc in Sources */ = {isa = PBXBuildFile; fileRef = F6C1465A286530C20069EF04 /* Data.docc */; };
 		F6C14661286530C20069EF04 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C14657286530C20069EF04 /* Data.framework */; };
 		F6C14666286530C20069EF04 /* RemoteAddAccountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C14665286530C20069EF04 /* RemoteAddAccountTest.swift */; };
@@ -60,6 +61,7 @@
 		F691072D2863FF7D004FAF13 /* AddAccountTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountTestCase.swift; sourceTree = "<group>"; };
 		F691073228640040004FAF13 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		F6AD070428726105009B4F82 /* RemoteAddAccountFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountFactory.swift; sourceTree = "<group>"; };
+		F6AD07072872697A009B4F82 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		F6C14657286530C20069EF04 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C14659286530C20069EF04 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		F6C1465A286530C20069EF04 /* Data.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Data.docc; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		F691074028640321004FAF13 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F6AD070628726959009B4F82 /* Base */,
 				F691074128640331004FAF13 /* Login */,
 			);
 			path = Source;
@@ -202,6 +205,14 @@
 				F691073228640040004FAF13 /* AccountModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		F6AD070628726959009B4F82 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F6AD07072872697A009B4F82 /* BaseModel.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		F6C14658286530C20069EF04 /* Data */ = {
@@ -374,6 +385,7 @@
 			files = (
 				F69107272863FD9C004FAF13 /* Domain.docc in Sources */,
 				F691073328640040004FAF13 /* AccountModel.swift in Sources */,
+				F6AD07082872697A009B4F82 /* BaseModel.swift in Sources */,
 				F691072E2863FF7D004FAF13 /* AddAccountTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
