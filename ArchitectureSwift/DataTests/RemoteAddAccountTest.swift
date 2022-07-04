@@ -32,19 +32,15 @@ protocol HttpPostClient {
 class RemoteAddAccountTest: XCTestCase {
     func testAddShouldCallHttpClientWithCorrectURL() {
         let url = URL(string: "https://google.com")!
-        let httpClientSpy = HttpClientSpy()
-        let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
+        let (sut, httpClientSpy) = self.makeSut(url: url)
         sut.add(addAccount: self.makeAddAccount())
         
         XCTAssertEqual(httpClientSpy.url, url)
     }
     
     func testAddShouldCallHttpClientWithCorrectData() {
-        let url = URL(string: "https://google.com")!
-        let httpClientSpy = HttpClientSpy()
-        let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
+        let (sut, httpClientSpy) = self.makeSut()
         sut.add(addAccount: self.makeAddAccount())
-        
         let data = try? JSONEncoder().encode(self.makeAddAccount())
         
         XCTAssertEqual(httpClientSpy.data, data)
