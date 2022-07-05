@@ -121,11 +121,12 @@
 			path = Seeds;
 			sourceTree = "<group>";
 		};
-		F6364D1A28653983005431E3 /* Tests */ = {
+		F6364D1A28653983005431E3 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				F6AD071028726DAF009B4F82 /* Http */,
 			);
-			path = Tests;
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		F69107082863FC68004FAF13 = {
@@ -153,49 +154,17 @@
 			isa = PBXGroup;
 			children = (
 				F691074028640321004FAF13 /* Source */,
-				F691072C2863FF60004FAF13 /* DomainTests */,
 				F69107252863FD9C004FAF13 /* Domain.h */,
 				F69107262863FD9C004FAF13 /* Domain.docc */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		F691072C2863FF60004FAF13 /* DomainTests */ = {
-			isa = PBXGroup;
-			children = (
-				F69107312863FF9C004FAF13 /* Spy */,
-				F69107302863FF96004FAF13 /* Seeds */,
-				F691072F2863FF8B004FAF13 /* Tests */,
-			);
-			path = DomainTests;
-			sourceTree = "<group>";
-		};
-		F691072F2863FF8B004FAF13 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				F691072D2863FF7D004FAF13 /* AddAccountTestCase.swift */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		F69107302863FF96004FAF13 /* Seeds */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Seeds;
-			sourceTree = "<group>";
-		};
-		F69107312863FF9C004FAF13 /* Spy */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Spy;
-			sourceTree = "<group>";
-		};
 		F691074028640321004FAF13 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F6AD070628726959009B4F82 /* Base */,
+				F6AD070628726959009B4F82 /* Helper */,
+				F6AD070D28726D26009B4F82 /* UseCases */,
 				F691074128640331004FAF13 /* Login */,
 			);
 			path = Source;
@@ -209,19 +178,61 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		F6AD070628726959009B4F82 /* Base */ = {
+		F6AD070628726959009B4F82 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				F6AD07072872697A009B4F82 /* BaseModel.swift */,
 			);
-			path = Base;
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F6AD070D28726D26009B4F82 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				F691072D2863FF7D004FAF13 /* AddAccountTestCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		F6AD070E28726D5D009B4F82 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				F6AD070B28726BCD009B4F82 /* HttpPostClient.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		F6AD070F28726D65009B4F82 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				F6AD070928726B43009B4F82 /* RemoteAddAccount.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		F6AD071028726DAF009B4F82 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				F6AD071128726DC3009B4F82 /* Tests */,
+				F6364D192865397A005431E3 /* Seeds */,
+				F6364D182865396F005431E3 /* Spy */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		F6AD071128726DC3009B4F82 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F6C14665286530C20069EF04 /* RemoteAddAccountTest.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		F6C14658286530C20069EF04 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F6AD070928726B43009B4F82 /* RemoteAddAccount.swift */,
-				F6AD070B28726BCD009B4F82 /* HttpPostClient.swift */,
+				F6AD070F28726D65009B4F82 /* UseCases */,
+				F6AD070E28726D5D009B4F82 /* Http */,
 				F6C1465A286530C20069EF04 /* Data.docc */,
 			);
 			path = Data;
@@ -230,10 +241,7 @@
 		F6C14664286530C20069EF04 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				F6364D1A28653983005431E3 /* Tests */,
-				F6364D192865397A005431E3 /* Seeds */,
-				F6364D182865396F005431E3 /* Spy */,
-				F6C14665286530C20069EF04 /* RemoteAddAccountTest.swift */,
+				F6364D1A28653983005431E3 /* UseCases */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
