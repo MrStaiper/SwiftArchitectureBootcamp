@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol AddAccountLogic {
-    func addUser(user: AccountModel.Request, completion: @escaping (Result<AccountModel.Response, Error>) -> Void)
+    func add(addAccountModel: AccountModel.Request, completion: @escaping (Result<AccountModel.Response, DomainError>) -> Void)
 }

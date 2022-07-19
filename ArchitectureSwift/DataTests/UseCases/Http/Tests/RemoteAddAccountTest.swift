@@ -13,14 +13,14 @@ class RemoteAddAccountTest: XCTestCase {
     func testAddShouldCallHttpClientWithCorrectURL() {
         let url = URL(string: "https://google.com")!
         let (sut, httpClientSpy) = self.makeSut(url: url)
-        sut.add(addAccount: self.makeAddAccount()) { _ in }
+        sut.add(addAccountModel: self.makeAddAccount()) { _ in }
         
         XCTAssertEqual(httpClientSpy.urls, [url])
     }
     
     func testAddShouldCallHttpClientWithCorrectData() {
         let (sut, httpClientSpy) = self.makeSut()
-        sut.add(addAccount: self.makeAddAccount()) { _ in }
+        sut.add(addAccountModel: self.makeAddAccount()) { _ in }
 
         XCTAssertEqual(httpClientSpy.data, self.makeAddAccount().toData())
     }
@@ -29,8 +29,14 @@ class RemoteAddAccountTest: XCTestCase {
         let (sut, httpClientSpy) = self.makeSut()
         let expect = expectation(description: "waiting")
         
-        sut.add(addAccount: self.makeAddAccount()) { error in
-            XCTAssertEqual(error, .unexpected)
+        sut.add(addAccountModel: self.makeAddAccount()) { result in
+            switch result {
+            case .failure(let error):
+                XCTAssertEqual(error, .unexpected)
+            case .success(_):
+                XCTFail("Expected error receive \(result) instead")
+            }
+            
             expect.fulfill()
         }
         
